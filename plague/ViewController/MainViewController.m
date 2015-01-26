@@ -22,6 +22,7 @@
     CustomHeaderView *_topView;
     CustomHeaderView *_bottomView;
     ShadowedTableView *_detailView;
+    BOOL _isClicked;
 }
 @end
 
@@ -30,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _isClicked = NO;
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -45,10 +48,12 @@
     _detailView.showsVerticalScrollIndicator = NO;
     _detailView.dataSource = self;
     _detailView.delegate = self;
+    _detailView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     _detailView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _detailView.width, TopViewHeight)];
     _detailView.tableHeaderView.backgroundColor = [UIColor clearColor];
-
+    _detailView.isNeedShadow = !_isClicked;
+    
     [self.view addSubview:_detailView];
     
     UINib *nib = [UINib nibWithNibName:@"PostDetailCell" bundle:[NSBundle mainBundle]];
@@ -213,17 +218,57 @@
 
     cell.text = @"test";
     cell.backgroundColor = [UIColor whiteColor];
-
+    cell.commentCount = 0;
+    cell.name = @"silan";
+    cell.isClicked = _isClicked;
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return tableView.height - TopViewHeight - BottomViewHeight;
+    if (!_isClicked)
+    {
+        return tableView.height - TopViewHeight - BottomViewHeight;
+    }
+    else
+    {
+        return self.view.height - 100 - 50;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (!_isClicked)
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+
+            _detailView.y = -TopViewHeight;
+            _topView.alpha = 0;
+            _bottomView.alpha = 0;
+            _detailView.tableHeaderView = nil;
+
+        } completion:^(BOOL finished) {
+        } ];
+    }
+    else
+    {
+        [UIView animateWithDuration:0.3 animations:^{
+
+            _detailView.y = 0;
+            _topView.alpha = 1;
+            _bottomView.alpha = 1;
+            
+            _detailView.tableHeaderView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, _detailView.width, TopViewHeight)];;
+
+        } completion:^(BOOL finished) {
+        } ];
+    }
     
+    _isClicked = !_isClicked;
+    
+    [tableView reloadData];
+    
+    _detailView.isNeedShadow = !_isClicked;
 }
 @end

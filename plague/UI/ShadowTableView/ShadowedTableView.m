@@ -44,6 +44,13 @@
 	return newShadow;
 }
 
+- (void)setIsNeedShadow:(BOOL)isNeedShadow
+{
+    _isNeedShadow = isNeedShadow;
+    
+    [self setNeedsLayout];
+}
+
 //
 // layoutSubviews
 //
@@ -53,6 +60,15 @@
 {
 	[super layoutSubviews];
 	
+    if (!_isNeedShadow)
+    {
+        [topShadow removeFromSuperlayer];
+        topShadow = nil;
+        [bottomShadow removeFromSuperlayer];
+        bottomShadow = nil;
+        return;
+    }
+    
 	//
 	// Construct the origin shadow if needed
 	//

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		AD381B4F1A7247D500DE8B63 /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381B3D1A7247D500DE8B63 /* UIColor+RGB.m */; };
 		AD381B501A7247D500DE8B63 /* CustomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381B401A7247D500DE8B63 /* CustomHeaderView.m */; };
-		AD381B511A7247D500DE8B63 /* PostDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381B421A7247D500DE8B63 /* PostDetailCell.m */; };
-		AD381B521A7247D500DE8B63 /* PostDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD381B431A7247D500DE8B63 /* PostDetailCell.xib */; };
 		AD381B531A7247D500DE8B63 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381B461A7247D500DE8B63 /* GradientView.m */; };
 		AD381B541A7247D500DE8B63 /* ShadowedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381B481A7247D500DE8B63 /* ShadowedTableView.m */; };
 		AD381B551A7247D500DE8B63 /* UIViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AD381B4B1A7247D500DE8B63 /* UIViewUtils.m */; };
@@ -20,6 +18,8 @@
 		ADD1A9E81A6F950D00555513 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD1A9E71A6F950D00555513 /* Images.xcassets */; };
 		ADD1A9EB1A6F950D00555513 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADD1A9E91A6F950D00555513 /* LaunchScreen.xib */; };
 		ADD1A9F71A6F950D00555513 /* plagueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1A9F61A6F950D00555513 /* plagueTests.m */; };
+		ADE5CA6B1A762D43007F8531 /* PostDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE5CA691A762D43007F8531 /* PostDetailCell.m */; };
+		ADE5CA6C1A762D43007F8531 /* PostDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE5CA6A1A762D43007F8531 /* PostDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,6 @@
 		AD381B3D1A7247D500DE8B63 /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
 		AD381B3F1A7247D500DE8B63 /* CustomHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderView.h; sourceTree = "<group>"; };
 		AD381B401A7247D500DE8B63 /* CustomHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderView.m; sourceTree = "<group>"; };
-		AD381B411A7247D500DE8B63 /* PostDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailCell.h; sourceTree = "<group>"; };
-		AD381B421A7247D500DE8B63 /* PostDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailCell.m; sourceTree = "<group>"; };
-		AD381B431A7247D500DE8B63 /* PostDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailCell.xib; sourceTree = "<group>"; };
 		AD381B451A7247D500DE8B63 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		AD381B461A7247D500DE8B63 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		AD381B471A7247D500DE8B63 /* ShadowedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowedTableView.h; sourceTree = "<group>"; };
@@ -58,6 +55,9 @@
 		ADD1A9F01A6F950D00555513 /* plagueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = plagueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD1A9F51A6F950D00555513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADD1A9F61A6F950D00555513 /* plagueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plagueTests.m; sourceTree = "<group>"; };
+		ADE5CA681A762D43007F8531 /* PostDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailCell.h; sourceTree = "<group>"; };
+		ADE5CA691A762D43007F8531 /* PostDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailCell.m; sourceTree = "<group>"; };
+		ADE5CA6A1A762D43007F8531 /* PostDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +92,10 @@
 			children = (
 				AD381B3F1A7247D500DE8B63 /* CustomHeaderView.h */,
 				AD381B401A7247D500DE8B63 /* CustomHeaderView.m */,
-				AD381B411A7247D500DE8B63 /* PostDetailCell.h */,
-				AD381B421A7247D500DE8B63 /* PostDetailCell.m */,
-				AD381B431A7247D500DE8B63 /* PostDetailCell.xib */,
 				AD381B441A7247D500DE8B63 /* ShadowTableView */,
+				ADE5CA681A762D43007F8531 /* PostDetailCell.h */,
+				ADE5CA691A762D43007F8531 /* PostDetailCell.m */,
+				ADE5CA6A1A762D43007F8531 /* PostDetailCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD381B521A7247D500DE8B63 /* PostDetailCell.xib in Resources */,
+				ADE5CA6C1A762D43007F8531 /* PostDetailCell.xib in Resources */,
 				ADD1A9EB1A6F950D00555513 /* LaunchScreen.xib in Resources */,
 				ADD1A9E81A6F950D00555513 /* Images.xcassets in Resources */,
 			);
@@ -293,8 +293,8 @@
 				ADD1A9E01A6F950D00555513 /* AppDelegate.m in Sources */,
 				AD381B551A7247D500DE8B63 /* UIViewUtils.m in Sources */,
 				AD381B4F1A7247D500DE8B63 /* UIColor+RGB.m in Sources */,
+				ADE5CA6B1A762D43007F8531 /* PostDetailCell.m in Sources */,
 				AD381B561A7247D500DE8B63 /* MainViewController.m in Sources */,
-				AD381B511A7247D500DE8B63 /* PostDetailCell.m in Sources */,
 				AD381B541A7247D500DE8B63 /* ShadowedTableView.m in Sources */,
 				AD381B531A7247D500DE8B63 /* GradientView.m in Sources */,
 				ADD1A9DD1A6F950D00555513 /* main.m in Sources */,

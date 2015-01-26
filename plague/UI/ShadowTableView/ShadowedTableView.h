@@ -16,4 +16,6 @@
 	CAGradientLayer *bottomShadow;
 }
 
+@property (nonatomic, assign) BOOL isNeedShadow;
+
 @end
